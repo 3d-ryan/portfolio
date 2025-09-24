@@ -16,17 +16,36 @@ has several advantages:
 - When written into the Page Object Model new tests become self documenting.
 ![Detailed report](/resources/detailedReport.png)
 
+### Parameter and Return Logging
 My reports include parameters and return values from Page Object Functions so we can better trace values when looking
 at the report.
 ![Step with parameters](/resources/logParameters.png "Step Parameters")
 ![Step with return](/resources/logReturnValues.png "Step Return")
 
+### Anonymize Sensitive Data
 With this much detail we also need to ensure that any sensitive values are hidden.
 ![Step with hidden value](/resources/hideSensitiveStrings.png "Hidden Value")
 
+### Nested Steps and Helper Functions
 All of these steps also nest as appropriate. This allows us to read a high level overview of the test, or dig deep into
 the implementation.
 ![Many sub steps](/resources/manySubSteps.png)
+
+We can see above an example of a helper function. This is a pattern I use to improve logs and reduce code duplication.
+I've seen many page classes with repeated functionality like:
+- fillForm()
+- completeForm()
+- fillFormRequired()
+- uploadPhotoAndSubmitForm()
+- fillFormAndCancel()
+- fillFormWithInvalidDataClickSubmitAndWaitForError()
+
+The last one is an exaggeration, but only by a bit 😬
+
+Writing functions like this into a page object is an example of
+test logic creeping into page logic. These functions clog up our page object model and create a bunch of duplicate code.
+Providing a helper class to pages that have complex sequences of actions helps keep the page class cleaner, while still
+providing helpful sequences for our tests.
 
 ## BDD Format
 I have also built in logging utilities for writing test cases in BDD format. This can give us the desired output format
@@ -48,6 +67,18 @@ page object functions. We can also control our timeouts in this context to impro
 suite execution time by up to 20% using this approach.
 ![Expected error](/resources/expectError.png)
 
+My framework has a default timeout of 5 seconds, but we can see the failing step executes in about 1 second.
+Additionally, we make an assertion that an exception was actually thrown. This creates an implicit check for the
+correctness of our Page Object Model. Login should fail when we enter the wrong credentials, and our page object should
+throw an error in that situation.
+
+## Logging Complex Types
+Log an array at high level.
+
+Drill down into array values.
+
+Log objects like Regex or DTOs.
+
 ## In Step Screenshots
 Any screenshots captured by Playwright will appear as part of the main body of the Allure report. This gives the
 screenshot less context, than if it appears within the failing step.
@@ -58,3 +89,7 @@ We can capture screenshots for multiple tabs with Playwright by default. Unfortu
 'screenshot'. This makes the report less clear, and debugging more difficult. Having each tab or window named improves
 the report.
 ![Multi tab screenshot](/resources/multiTabScreenshot.png)
+
+## Soft Assert Screenshots
+
+TBD.
