@@ -28,6 +28,26 @@ All of these steps also nest as appropriate. This allows us to read a high level
 the implementation.
 ![Many sub steps](/resources/manySubSteps.png)
 
+## BDD Format
+I have also built in logging utilities for writing test cases in BDD format. This can give us the desired output format
+without having to depend on a keyword driven framework.
+![BDD test steps](/resources/bddFormat.png)
+
+## Expected Errors
+Another common issue I have seen is related to negative or edge case testing. Our Page Object Model often includes
+validating steps to ensure our actions are complete and correct. For example, after clicking the 'Log In' button on
+a login page, we expect the login button to no longer be visible. This is important for test stability because we want
+to ensure our test is in a known and stable state before we do the next action.
+
+Issues arise when we have to test scenarios that do not fit our expected behaviour. I have seen many page functions like
+clickLogInAndWaitForFailure(). Functions like this clog up our page object model and often have poor performance as we
+wait for operations to time out.
+
+Providing a generic utility function expectError() allows us to test edge cases on any page without writing additional
+page object functions. We can also control our timeouts in this context to improve test performance. I've reduced test
+suite execution time by up to 20% using this approach.
+![Expected error](/resources/expectError.png)
+
 ## In Step Screenshots
 Any screenshots captured by Playwright will appear as part of the main body of the Allure report. This gives the
 screenshot less context, than if it appears within the failing step.
