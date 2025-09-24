@@ -91,5 +91,7 @@ the report.
 ![Multi tab screenshot](/resources/multiTabScreenshot.png)
 
 ## Soft Assert Screenshots
+TBD.
 
+# Selenium Java
 TBD.
