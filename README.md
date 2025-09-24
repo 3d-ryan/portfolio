@@ -1,3 +1,13 @@
+# Welcome
+Welcome to my portfolio. My goal is to create a public facing document that helps me demonstrate my test and development
+skills. If you're interested in my work, or think I would be a good fit for a QA position at your company please [reach
+out](www.linkedin.com/in/david-ryan-447a23169).
+
+# Table of Contents
+1. [Playwright](#playwright)
+2. [Selenium Java](#selenium-java)
+3. [PHP Web Game](#php-web-game-laravel)
+
 # Playwright
 While I have more years working with Selenium Webdriver I'm very excited about Playwright as a testing framework. It
 provides a lot of what we need out of the box including browsers and drivers, parallelization, retry logic, screenshot,
@@ -94,4 +104,7 @@ the report.
 TBD.
 
 # Selenium Java
+TBD.
+
+# PHP Web Game (Laravel)
 TBD.
