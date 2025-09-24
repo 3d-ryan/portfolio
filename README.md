@@ -5,8 +5,8 @@ and debug tools. It's also easy to include Allure as a reporting option, which i
 there are several areas for improvement.
 
 ## Multi Tab/Window Testing
-We can capture screenshots for multiple tabs with Playwright by default. Unfortunately all screenshots will simply be
-named 'screenshot'. It is much more helpful for debugging test failures to have named screenshots for each tab we are
-working with:
+We can capture screenshots for multiple tabs with Playwright by default. Unfortunately all screenshots will be named 
+'screenshot'. This makes the report less clear, and debugging more difficult. Having each tab or window named improves
+the report:
 
 ![Multi Tab Screenshots Image](/resources/multiTabScreenshot.png)
