@@ -101,10 +101,10 @@ the report.
 ![Multi tab screenshot](/resources/multiTabScreenshot.png)
 
 ## Soft Assert Screenshots
-TBD.
+ToDo.
 
 # Selenium Java
-TBD.
+ToDo.
 
 # PHP Web Game (Laravel)
-TBD.
+ToDo.
