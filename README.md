@@ -83,11 +83,9 @@ correctness of our Page Object Model. Login should fail when we enter the wrong 
 throw an error in that situation.
 
 ## Logging Complex Types
-Log an array at high level.
-
-Drill down into array values.
-
-Log objects like Regex or DTOs.
+I've designed the additional logging to handle complex types such as objects and arrays. The report will allow us to
+drill down into the fine details of any complex variables.
+![Array return drill down screenshot](/resources/returnArray.png)
 
 ## In Step Screenshots
 Any screenshots captured by Playwright will appear as part of the main body of the Allure report. This gives the
