@@ -99,7 +99,10 @@ the report.
 ![Multi tab screenshot](/resources/multiTabScreenshot.png)
 
 ## Soft Assert Screenshots
-ToDo.
+Playwright provides the ability to make soft assertions. If a soft assertion fails the test will continue to execute and
+report any failures at the end. By default, we will only have a screenshot at the end of the test. We want to be able
+to see a screenshot of our application at the time the failure occurred.
+![Soft asserts with screenshots](/resources/screenshotSoftExpectFailures.png)
 
 # Selenium Java
 ToDo.
