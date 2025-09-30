@@ -32,6 +32,11 @@ at the report.
 ![Step with parameters](/resources/logParameters.png "Step Parameters")
 ![Step with return](/resources/logReturnValues.png "Step Return")
 
+### Logging Complex Types
+I've designed the additional logging to handle complex types such as objects and arrays. The report will allow us to
+drill down into the fine details of any complex variables.
+![Array return drill down screenshot](/resources/returnArray.png)
+
 ### Anonymize Sensitive Data
 With this much detail we also need to ensure that any sensitive values are hidden.
 ![Step with hidden value](/resources/hideSensitiveStrings.png "Hidden Value")
@@ -81,11 +86,6 @@ My framework has a default timeout of 5 seconds, but we can see the failing step
 Additionally, we make an assertion that an exception was actually thrown. This creates an implicit check for the
 correctness of our Page Object Model. Login should fail when we enter the wrong credentials, and our page object should
 throw an error in that situation.
-
-## Logging Complex Types
-I've designed the additional logging to handle complex types such as objects and arrays. The report will allow us to
-drill down into the fine details of any complex variables.
-![Array return drill down screenshot](/resources/returnArray.png)
 
 ## In Step Screenshots
 Any screenshots captured by Playwright will appear as part of the main body of the Allure report. This gives the
