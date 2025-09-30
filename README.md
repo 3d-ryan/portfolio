@@ -100,7 +100,7 @@ throw an error in that situation.
 
 ## In Step Screenshots
 Any screenshots captured by Playwright will appear as part of the main body of the Allure report. This gives the
-screenshot less context, than if it appears within the failing step.
+screenshot less context than if it appears within the failing step.
 ![Nested screenshot](/resources/nestedScreenshot.png)
 
 ## Multi Tab/Window Testing
