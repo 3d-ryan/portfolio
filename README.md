@@ -5,6 +5,17 @@ out](www.linkedin.com/in/david-ryan-447a23169).
 
 # Table of Contents
 1. [Playwright](#playwright)
+   1. [Detailed Test Steps](#detailed-test-steps)
+      1. [Parameter and Return Logging](#parameter-and-return-logging)
+      2. [Logging Complex Types](#logging-complex-types)
+      3. [Anonymize Sensitive Data](#anonymize-sensitive-data)
+      4. [Nested Steps and Helper Functions](#nested-steps-and-helper-functions)
+   2. [BDD Format](#bdd-format)
+   3. [Expected Errors](#expected-errors)
+   4. [In Step Screenshots](#in-step-screenshots)
+   5. [Multi Tab/Window Testing](#multi-tabwindow-testing)
+   6. [Soft Assert Screenshots](#soft-assert-screenshots)
+   7. [Element Screenshots](#element-screenshots)
 2. [Selenium Java](#selenium-java)
 3. [PHP Web Game](#php-web-game-laravel)
 
