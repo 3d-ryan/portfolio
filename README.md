@@ -104,6 +104,24 @@ report any failures at the end. By default, we will only have a screenshot at th
 to see a screenshot of our application at the time the failure occurred.
 ![Soft asserts with screenshots](/resources/screenshotSoftExpectFailures.png)
 
+## Element Screenshots
+With Playwright, we can screenshot individual elements and make image comparisons. The issue with the default behaviour
+is that images are treated as unique to each individual environment and browser. This means that our developers, and our
+CI will require their own versions of any snapshot we generate. The reason for this is clear, different browsers or OS
+will often generate a slightly different image of a given element. However, these differences are often only a few
+pixels of white space.
+
+By implementing my own screenshot comparison we can have a single image act as the source of truth for all browsers and
+environments. My algorithm will resize images (if necessary) to meet the expected image size, then perform the
+comparison using the same underlying libraries Playwright uses.
+
+If we must deal with elements that have significant differences between browsers or environments we can provide
+different expected images given the current test settings.
+
+In my example report if a failure occurs Allure will show the expected screenshot, the actual screenshot, and the diff
+between the two.
+![Allure report with failing screenshot comparison](/resources/screenshotMatchExample.png)
+
 # Selenium Java
 ToDo.
 
