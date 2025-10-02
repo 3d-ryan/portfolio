@@ -137,4 +137,13 @@ between the two.
 ToDo.
 
 # PHP Web Game (Laravel)
-ToDo.
+I'm creating my own version of [Advance Wars by Web](https://awbw.amarriner.com/), a turn based strategy game I play 
+with friends. My primary goal is to re-balance the game for team games, as there are a few issues with the original
+site.
+
+I'm using PHP and the Laravel framework to develop my version. It's a work in progress, but I've got a map editor and
+very basic gameplay working. As you would expect I have also written automated tests for the application, striving for
+90% coverage or higher.
+
+![AWBW Test Game](/resources/awbw/awbwTestGame.png)![Language Breakdown](/resources/awbw/awbwLanguages.png)
+![Code Coverage](/resources/awbw/awbwTestCoverage.png)
